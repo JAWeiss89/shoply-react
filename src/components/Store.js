@@ -1,9 +1,23 @@
 import React from 'react';
+import Product from '../components/Product';
+import Cart from '../components/Cart';
+import { useSelector } from 'react-redux'
+import '../styles/Store.css';
+
 
 const Store = () => {
+    const products = useSelector(store => store.products)
+
     return (
         <div className="Store">
-            <h1>This is the store</h1>
+            <h1>Store</h1>
+            <Cart /> 
+            <div className="Store-catalog">
+            {Object.keys(products).map((id) => {
+                return <Product key={id} id={id}/>
+            })}
+            </div>
+
         </div>
     )
 }

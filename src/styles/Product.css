@@ -1,0 +1,23 @@
+.Product {
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.Product img {
+    /* max-width: 60%; */
+    height: 60%;
+}
+
+.Product-name {
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.Product-price {
+    margin-left: 20px;
+}
