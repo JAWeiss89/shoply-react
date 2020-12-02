@@ -10,8 +10,6 @@ const Store = () => {
 
     return (
         <div className="Store">
-            <h1>Store</h1>
-            <Cart /> 
             <div className="Store-catalog">
             {Object.keys(products).map((id) => {
                 return <Product key={id} id={id}/>

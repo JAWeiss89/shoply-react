@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
+import '../styles/Cart.css';
 
 const Cart = () => {
     const [displayCart, setDisplayCart] = useState(false);
 
     const cart = useSelector(store => store.cart);
-    const products = useSelector(store => store.products)
 
     const toggleCart = () => {
         setDisplayCart(!displayCart);
@@ -13,15 +13,7 @@ const Cart = () => {
 
     return (
         <div className="Cart">
-            <h2 onClick={toggleCart}>Cart <i className="fas fa-shopping-cart"></i> ({cart.length})</h2>
-            {displayCart &&
-            <div className="Cart-expanded">
-                <p>Cart Items:</p>
-                <ul>
-                    {cart.map((cartItem) => <li key={cartItem}> {products[cartItem]["name"]} </li>)}
-                </ul>
-            </div>
-            }
+            <p onClick={toggleCart}>Cart <i className="fas fa-shopping-cart"></i> ({cart.length})</p>
         </div>
     )
 }

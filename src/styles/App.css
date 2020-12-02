@@ -1,5 +1,10 @@
 .App {
     min-height: 100vh;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}

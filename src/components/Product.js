@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 import '../styles/Product.css';
 
 
@@ -19,8 +20,10 @@ const Product = ( {id} ) => {
 
     return (
         <div className="Product" id={id}>
+            <Link to={`/products/${id}`}>
             <p className="Product-name">{products[id]["name"]}<span className="Product-price">${products[id]["price"]}</span></p>
             <img src={products[id]["image_url"]} alt={products[id]["name"]}/>
+            </Link>
             <p></p>
             <button onClick={addToCart}>Add to Cart</button>
             {cartItems.includes(id) && 

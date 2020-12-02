@@ -1,0 +1,15 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Navbar * {
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar-logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5em;
+}
